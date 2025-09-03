@@ -14,7 +14,7 @@ export const Home: React.FC = () => {
           </div>
           
           <h1 className="text-5xl font-bold text-gray-900 mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-            Regear System
+            Maharlika Regear System
           </h1>
           <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
             Advanced player regear management with role-based gear presets, tier limitations, 
