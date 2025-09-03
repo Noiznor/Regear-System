@@ -26,7 +26,7 @@ export const Navigation: React.FC<NavigationProps> = ({ currentView, onViewChang
             </div>
             <div className="text-left">
               <div className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-                Regear System
+                Maharlika Regear System
               </div>
               <div className="text-sm text-gray-500">Guild Management</div>
             </div>
