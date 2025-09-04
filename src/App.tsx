@@ -61,12 +61,13 @@ function App() {
           />
         );
       case 'view':
-        return <ViewThreads threads={threads} onSelectThread={handleSelectThread} />;
+        return <ViewThreads threads={threads} onSelectThread={handleSelectThread} onThreadsUpdated={setThreads} />;
       case 'modify':
         return (
           <ViewThreads 
             threads={threads} 
             onSelectThread={(thread) => handleEditThread(thread)} 
+            onThreadsUpdated={setThreads}
           />
         );
       case 'details':
