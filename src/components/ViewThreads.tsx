@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import { Calendar, Users, Package, Eye, Shield, Sword, Heart, Star, Trash2, AlertTriangle } from 'lucide-react';
 import { Thread } from '../types';
 import { calculateItemTotals } from '../utils/itemCalculator';
-import { deleteThread } from '../utils/storage';
+import { deleteThread, loadThreads } from '../utils/storage';
 
 interface ViewThreadsProps {
   threads: Thread[];
   onSelectThread: (thread: Thread) => void;
   onThreadDeleted?: () => void;
+  onThreadsUpdated?: (threads: Thread[]) => void;
 }
 
-export const ViewThreads: React.FC<ViewThreadsProps> = ({ threads, onSelectThread, onThreadDeleted }) => {
+export const ViewThreads: React.FC<ViewThreadsProps> = ({ threads, onSelectThread, onThreadDeleted, onThreadsUpdated }) => {
   const [deletingThread, setDeletingThread] = useState<string | null>(null);
 
   const roleIcons = {
